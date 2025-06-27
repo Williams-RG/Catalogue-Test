@@ -6,15 +6,14 @@
 </head>
 <body>
     <main>
-        <button id="clickMe">Click me!</button>
+        <button id="doNOTclickme">Click me!</button>
     </main>
     <script>
         const phone = '+5804144740365'
-        const msg = encodeURIComponent('You are such a kinky guy')
-        `https://wa.me/${phone}/?text=${msg}`
+        const msg = encodeURIComponent('Oh boy you clicked on me!')
 
         document.getElementById('clickMe').onclick = function () {
-            var url = `https://wa.me/${phone}/?text=${msg}`
+            var url = `https://wa.me/${phone}/?text=${msg}`; window.open(url, '_blank');
         }
     </script>
 </body>

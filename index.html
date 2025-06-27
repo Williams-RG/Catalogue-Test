@@ -1,10 +1,18 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+<title>WhatsApp Share Button</title>
 </head>
 <body>
-    <p>Hello World!</p>
+<!-- Mobile Share Button -->
+<a href="whatsapp://send?text=Hello%20World!">Share on WhatsApp Mobile</a>
+<!-- Desktop Share Button -->
+<button id="shareButton">Share on WhatsApp Web</button>
+<script>
+document.getElementById('shareButton').onclick = function () {
+  var url = 'https://web.whatsapp.com/send?text=' + encodeURIComponent('Hello World!');
+  window.open(url, '_blank');
+};
+</script>
 </body>
 </html>

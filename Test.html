@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <button id="clickMe">Click me!</button>
+    </main>
+    <script>
+        const phone = '+5804144740365'
+        const msg = encodeURIComponent('You are such a kinky guy')
+        `https://wa.me/${phone}/?text=${msg}`
+
+        document.getElementById('clickMe').onclick = function () {
+            var url = `https://wa.me/${phone}/?text=${msg}`
+        }
+    </script>
+</body>
+</html>

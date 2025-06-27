@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>WhatsApp Share Button</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cewi Test Sports</title>
 </head>
 <body>
-<!-- Mobile Share Button -->
-<a href="whatsapp://send?text=Hello%20World!">Share on WhatsApp Mobile</a>
-<!-- Desktop Share Button -->
-<button id="shareButton">Share on WhatsApp Web</button>
-<script>
-document.getElementById('shareButton').onclick = function () {
-  var url = 'https://web.whatsapp.com/send?text=' + encodeURIComponent('Hello World!');
-  window.open(url, '_blank');
-};
-</script>
+    <main>
+        <button id="clickMe">Tocame!</button>
+    </main>
+    <script>
+        const phone = '+5804144740365'
+        const msg = encodeURIComponent('Ay chamo me tocaste')
+
+        document.getElementById('clickMe').onclick = function () {
+            var url = `https://wa.me/${phone}/?text=${msg}`; window.open(url, '_blank');
+        }
+    </script>
 </body>
 </html>
